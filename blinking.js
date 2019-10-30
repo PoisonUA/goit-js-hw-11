@@ -10,12 +10,12 @@ const colors = [
   '#795548',
 ];
 
-const randomIntegerFromInterval = (min, max) => {
+const randomInteger = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
 
 const randomColor = () => {
-    body.style.backgroundColor = `${colors[randomIntegerFromInterval(0, 5)]}`;
+    body.style.backgroundColor = `${colors[randomInteger(0, 5)]}`;
 }
 
 const blinker = () => {
@@ -30,6 +30,3 @@ const stopBlinker = () => {
 
 btnStart.addEventListener('click', blinker);
 btnStop.addEventListener('click', stopBlinker);
-
-console.log(btnStart);
-console.log(btnStop);

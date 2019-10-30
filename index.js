@@ -2,6 +2,7 @@ const inputDataForm = document.querySelector('#calendar');
 inputDataForm.min = `${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate()+1}`;
 const defaultTargetData = inputDataForm.valueAsNumber;
 const currentDate = new Date().getTime();
+const someText = document.querySelector('.some-text')
 
 class CountdownTimer {
     constructor ({selector, targetDate}) {
@@ -41,3 +42,4 @@ const runTimer = () => {
 
 convertingMsToDate();
 inputDataForm.addEventListener('change', runTimer);
+
